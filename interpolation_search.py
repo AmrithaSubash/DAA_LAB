@@ -16,11 +16,10 @@ def interpolation_search(arr, target):
             if arr[low] == target:
                 return low, comparisons
             return -1, comparisons
-        
-            # Interpolation formula
-            pos = low + int(((target - arr[low]) * (high - low))
-            / (arr[high] - arr[low]))
-            
+
+        # Interpolation formula
+        pos = low + int(((target - arr[low]) * (high - low))/ (arr[high] - arr[low]))
+
         if arr[pos] == target:
             return pos, comparisons
         elif arr[pos] < target:
